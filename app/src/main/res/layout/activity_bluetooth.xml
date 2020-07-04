@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BluetoothActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ejemplo de Bluetooth"
+        android:textSize="25sp"
+        android:textColor="#000"
+        android:layout_marginBottom="10px"
+    />
+
+    <!--Mostar si el bluetooth esta disponible o no-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/estadoBluetooth"
+        android:text=""
+        android:textSize="15sp"
+        android:textColor="#757575"
+    />
+
+    <!--Icono bluetooth,  on/off-->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/bluetoothIcon"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:gravity="center">
+
+        <!-- boton Prender -->
+        <Button
+            android:layout_marginRight="5dp"
+            android:onClick="btnOn"
+            android:id="@+id/onBtn"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_estilo"
+            android:text="Encender"
+            android:textColor="#FFF"
+            />
+
+        <!-- boton Apagar -->
+        <Button
+            android:layout_marginLeft="5dp"
+            android:onClick="btnOff"
+            android:id="@+id/offBtn"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_estilo"
+            android:text="Apagar"
+            android:textColor="#FFF" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="15dp"
+        android:gravity="center">
+
+        <!-- boton hacer visible para otros dispositivos -->
+        <Button
+            android:layout_marginRight="5dp"
+            android:onClick="btnhacerVisible"
+            android:id="@+id/hacerVisibleBtn"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_estilo"
+            android:text="Hacer visible"
+            android:textColor="#FFF" />
+
+        <!-- Lista de dispositivos emparejados -->
+        <Button
+            android:layout_marginLeft="5dp"
+            android:onClick="btnDispositivosEmparejados"
+            android:layout_width="400px"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_estilo"
+            android:text="Dispositivos Emparejados"
+            android:textColor="#FFF" />
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:layout_marginLeft="5dp"
+        android:onClick="btnDescubrirDispositivos"
+        android:id="@+id/emparejadosBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_estilo"
+        android:text="Descubrir dispositivos"
+        android:textColor="#FFF" />
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/dispositivosEncontrados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#000"
+        />
+
+    <ListView
+        android:layout_below="@+id/btnFindUnpairedDevices"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/lvNewDevices"/>
+
+    <TextView
+        android:id="@+id/txtEmparejados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="20sp"
+        android:textColor="#000"
+        />
+
+</LinearLayout>
+</ScrollView>
